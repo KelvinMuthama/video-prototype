@@ -2,7 +2,7 @@ search_btn.onclick = function () {
 
     // Get the youtube url source
     let url = document.getElementById("youtube-url").value; // Our iframe
-    let video_src = document.getElementById("video_src").src;
+    let video_src = document.getElementById("video-src").src;
 
     // This function is for changing the youtube url source on the iframe
     function changeSrc() {
@@ -19,5 +19,7 @@ search_btn.onclick = function () {
     } else if (url.match(/(\embed\/)+([^\/]+)/)) {
         url = url.match(/(\embed\/)+([^\/]+)/);
         changeSrc();
+    } else {
+        alert(`${video_src} Not found`)
     }
 }
