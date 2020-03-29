@@ -16,5 +16,8 @@ search_btn.onclick = function () {
     } else if (url.match(/(\.be\/)+([^\/]+)/)) {
         url = url.match(/(\.be\/)+([^\/]+)/);
         changeSrc();
+    } else if (url.match(/(\embed\/)+([^\/]+)/)) {
+        url = url.match(/(\embed\/)+([^\/]+)/);
+        changeSrc();
     }
 }
