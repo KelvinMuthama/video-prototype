@@ -10,9 +10,11 @@ search_btn.onclick = function () {
         document.getElementById("video-src").src = video_src;
     }
 
-
     if (url.match(/(\?|&)v=([^&#]+)/)) {
         url = url.match(/(\?|&)v=([^&#]+)/);
+        changeSrc();
+    } else if (url.match(/(\.be\/)+([^\/]+)/)) {
+        url = url.match(/(\.be\/)+([^\/]+)/);
         changeSrc();
     }
 }
